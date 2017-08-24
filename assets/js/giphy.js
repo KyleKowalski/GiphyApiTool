@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
-  buttonArray = [ // seed array
-                "Kittens",
-                "Puppies",
-                "Mountains",
-                "Eclipse",
-                "The Avengers",
-                "The Matrix",
-                "Random"
-                ];
+  var buttonArray = [ // seed array
+    "Kittens",
+    "Puppies",
+    "Mountains",
+    "Eclipse",
+    "The Avengers",
+    "The Matrix",
+    "Random"
+    ];
 
   function createButtonsFromArray() {
     $("#otherButtonsHere").empty();
@@ -16,7 +16,6 @@ $(document).ready(function() {
       createGifButton(item);
     });
   }
-
   createButtonsFromArray();
 
   $("#buttonToAddSearchTermButtons").click(function (){
