@@ -10,15 +10,21 @@ $(document).ready(function() {
                 "Random"
                 ];
 
-  buttonArray.forEach(function(item) {
-    createGifButton(item);
-  });
+  function createButtonsFromArray() {
+    $("#otherButtonsHere").empty();
+    buttonArray.forEach(function(item) {
+      createGifButton(item);
+    });
+  }
+
+  createButtonsFromArray();
 
   $("#buttonToAddSearchTermButtons").click(function (){
     var thisSearchTerm = $("#inputSearchTerm").val();
 
     if (thisSearchTerm != "") {
-      createGifButton(thisSearchTerm);
+      buttonArray.push(thisSearchTerm)
+      createButtonsFromArray();
     }
     $("#inputSearchTerm").val("");
   });
