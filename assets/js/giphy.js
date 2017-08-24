@@ -36,7 +36,7 @@ $(document).ready(function() {
   $("#otherButtonsHere").on("click", ".gifButton", function() {
     console.log(this);
     var userInput = $(this).html(); // TODO setup a user input
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
     userInput + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     $.ajax({
