@@ -1,5 +1,19 @@
 $(document).ready(function() {
 
+  buttonArray = [ // seed array
+                "Kittens",
+                "Puppies",
+                "Mountains",
+                "Eclipse",
+                "The Avengers",
+                "The Matrix",
+                "Random"
+                ];
+
+  buttonArray.forEach(function(item) {
+    createGifButton(item);
+  });
+
   $("#buttonToAddSearchTermButtons").click(function (){
     var thisSearchTerm = $("#inputSearchTerm").val();
 
@@ -37,11 +51,11 @@ $(document).ready(function() {
         var rating = value.rating;
 
         var thisP = $("<p>");
-        thisP.text("Results: " + rating);
+        thisP.text("Rating: " + rating.toUpperCase());
         var targetParent = $("#gifs-appear-here");
         var thisDiv = $("<div>");
         var thisGif = $("<img>");
-        var thisHr = $("<hr>");
+        thisDiv.attr("class", "div-css")
         thisGif.attr("src", stillUrl);
         thisGif.attr("still_url", stillUrl);
         thisGif.attr("moving_url", movingUrl);
@@ -49,7 +63,6 @@ $(document).ready(function() {
         thisGif.attr("class", "gif");
         thisDiv.prepend(thisP);
         thisDiv.append(thisGif);
-        thisDiv.append(thisHr);
         targetParent.prepend(thisDiv);
       });
     });
@@ -68,5 +81,21 @@ $(document).ready(function() {
       $(this).attr("src", stillPicture);
       $(this).attr("current_state", "still");
     }
+  });
+
+  $("#startAllGifsButton").click(function() {
+    $(".gif").each(function(){
+      var movingPicture = $(this).attr("moving_url");
+      $(this).attr("src", movingPicture);
+      $(this).attr("current_state", "active");
+    });
+  });
+
+  $("#stopAllGifsButton").click(function() {
+    $(".gif").each(function(){
+      var stillPicture = $(this).attr("still_url");
+      $(this).attr("src", stillPicture);
+      $(this).attr("current_state", "still");
+    });
   });
 });

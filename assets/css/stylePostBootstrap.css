@@ -1,0 +1,35 @@
+* {
+
+}
+
+html {
+	height:100%;
+}
+
+body {
+
+}
+
+.clear-both {
+	clear:both;
+}
+
+.form-control {
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:15px;
+	width:80%;
+	background-color:rgba(240, 240, 240, 1);
+}
+
+.gifButton {
+	background-color:rgba(200, 255, 255, 1);
+	margin-left:5px; 
+}
+
+.div-css {
+	float:left;
+	margin:10px;
+	border:2px solid black;
+	border-radius: 5px;
+}

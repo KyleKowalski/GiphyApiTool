@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="assets/js/giphy.js"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<!-- <link rel="stylesheet" type="text/css" href="assets\css\stylePostBootstrap.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets\css\stylePostBootstrap.css">
 
 </head>
 <body>
@@ -17,13 +17,16 @@
 	<container>
 		<row>
 			<input type="text" id="inputSearchTerm" placeholder="Enter Giphy Search Term Here:" class="form-control">
-			<button type="button" id="buttonToAddSearchTermButtons">Add New Gif Button</button>			
+			<button type="button" id="buttonToAddSearchTermButtons" class="form-control">Add New Gif Button</button>			
 		</row>
 		<hr>
 		<row>
-			<div id="otherButtonsHere">
-				<button type="button" class="gifButton" id="kittens">kittens</button>
-			</div>
+			<button type="button" id="startAllGifsButton" class="form-control">Start All Gifs</button>
+			<button type="button" id="stopAllGifsButton" class="form-control">Stop All Gifs</button>
+		</row>
+		<hr>
+		<row>
+			<div id="otherButtonsHere"></div>
 		</row>
 
 		<hr>
